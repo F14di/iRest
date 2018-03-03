@@ -1,0 +1,21 @@
+
+.loginForm{
+	margin:0px auto;
+	width:40%;
+	box-shadow:3px 7px 8px rgba(20,72,54,0.3);
+}
+
+
+
+.signUp{
+	color:green;
+	opacity:0.8;
+	font-weight:bold
+}
+
+.signUp:hover,
+.signUp:active{
+	background-color:pink;
+	opacity:0.8;
+	color:white;
+}

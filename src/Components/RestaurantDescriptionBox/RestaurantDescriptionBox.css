@@ -1,0 +1,26 @@
+.Text{
+border:1px solid gray;
+margin-top:5%;
+}
+
+
+.Text h1{
+	letter-spacing:3px;
+}
+
+.DescriptionBoxImage{
+	margin:0px 15px 0 3px;
+	width:100%;
+	height:auto;
+}
+
+@media (min-width:770px){
+	.DescriptionBoxImage{
+		width:35%;
+		height:auto;
+		float:right;
+		margin-top:40px;
+	}
+
+}
+

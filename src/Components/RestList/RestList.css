@@ -1,0 +1,13 @@
+.RestList{
+	margin:0 50px;
+}
+
+
+@media (min-width: 400px) {
+
+
+   	div img {
+        width: 100%;
+        height:auto%;
+    }
+}
