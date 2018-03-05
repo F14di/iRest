@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Place.css'
-import RestaurantImage from './RestaurantImage/RestaurantImage'
+import RestaurantImage from '../RestaurantImage/RestaurantImage'
 
 const Place=(props)=>{
 	

@@ -1,11 +1,12 @@
 import React , {Component} from 'react'
-import {restaurants} from './Components/Restaurant'
-import Restlist from './Components/Restlist'
-import SearchBox from './Components/SearchBox'
-import Signin from './Components/Signin'
-import Signup from './Components/Signup'
-import Navigation from './Components/Navigation'
+import {restaurants} from '../../Variables/RestaurantsList/Restaurant'
+import Restlist from '../../Components/RestList/Restlist'
+import SearchBox from '../../Components/SearchBox/SearchBox'
+import Signin from '../../Components/Signin/Signin'
+import Signup from '../../Components/Signup/Signup'
+import Navigation from '../../Components/Navigation/Navigation'
 import classes from './App.css'
+import LandingPhoto from '../../Components/LandingPhoto/LandingPhoto'
 
 
 
@@ -67,6 +68,7 @@ class App extends Component{
 
     return(   
         <div className="App">
+          <LandingPhoto />
           <Navigation onRouteChange={this.onRouteChange} isLoggedIn={isLoggedIn}/>
           <div  className={classes.App}>
           {route==='home'?

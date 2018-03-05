@@ -1,3 +1,44 @@
 .Navigation{
 cursor:pointer;
+
+}
+.NavList{
+	list-style:none;
+	display:inline-block;
+	 background-color:#aaa;
+	text-align:center;
+	font-size:14px;
+    opacity: 0.8;
+}
+.NavList li{
+    font-family : 'Oswald',sans-serif;
+    padding:3px;
+    maring:5px;
+    font-weight:bold;
+    display: inline-block;
+    letter-spacing:1px;
+   
+}
+
+
+.NavList a{
+	will-change:color;
+	transition:all 0.18s ease-in;
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.NavList li:hover{
+	background-color:white;
+	color:white;
+	margin:auto;
+	opacity:1;
+	transition:all 0.18s ease-in;
+}
+.NavList a:hover{
+
+	color:white;
+
 }

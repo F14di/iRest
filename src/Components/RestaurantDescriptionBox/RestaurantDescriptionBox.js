@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './RestaurantDescriptionBox/RestaurantDescriptionBox.css'
-import ExitButton from './ExitButton/ExitButton'
+import classes from './RestaurantDescriptionBox.css'
+import ExitButton from '../ExitButton/ExitButton'
 	
 const RestaurantDescriptionBox=(props)=>{
 	return (

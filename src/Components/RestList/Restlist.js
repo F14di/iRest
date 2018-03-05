@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import Place from './Place'
+import Place from './Place/Place'
 import FaPlusCircle from 'react-icons/lib/fa/plus-circle'
-import Modal from './Modal/Modal'
-import RestaurantDescriptionBox from './RestaurantDescriptionBox'
-import classes from './RestList/RestList.css'
+import Modal from '../Modal/Modal'
+import RestaurantDescriptionBox from '../RestaurantDescriptionBox/RestaurantDescriptionBox'
+import classes from './RestList.css'
+import AddRestaurant from './AddRestaurant/AddRestaurant'
 
 
 class Restlist extends Component{
@@ -17,6 +18,10 @@ class Restlist extends Component{
 
 	showDescriptionBox=(index)=>{
    	 this.setState({restaurantObject:index,RestaurantInfoActive:true })
+	}
+
+	newRestaurantForm=()=>{
+		alert('add New Restaurant Form ')
 	}
 
 
@@ -44,13 +49,14 @@ class Restlist extends Component{
 
 
 	RestComponent.push(
-		<div  key={1000} className="pointer  alert w-100 measure-narrow dib bw0  ma3 grow  br3 shadow-4 ">
-			<FaPlusCircle alt="addIcon" width="115" height="135"/>
-				<div className="tc pa2">
-					<h2>New</h2>
-					<p>Restaurant</p>
-				</div>
-		</div>
+		<AddRestaurant
+		id="FaPlusCircle"
+		name="Add a Restaurant"
+		icon={FaPlusCircle}
+		key="addNewRestaurant"
+		newRestaurantForm={()=>this.newRestaurantForm}
+		/>
+		
 	)
 
 	

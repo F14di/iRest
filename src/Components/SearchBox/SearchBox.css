@@ -1,0 +1,50 @@
+input[type="text"]{
+font-weight:bold;
+color:#555;
+width:40%;
+border:2px solid #aaa;
+border-radius:4px;
+margin: 8px 5%;
+outline:none;
+padding:10px;
+box-sizing:border-box;
+transition: 0.3s;
+padding-left: 40px;
+}
+
+
+
+input[type="text"]:focus{
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px dodgerBlue;
+
+}
+
+
+div{
+	position:relative;
+}
+
+div i{
+	position:absolute;
+	left:6%;
+	top:24.5%;
+	margin:3px auto;
+	height:25px;
+	width:20px;
+	color: #aaa;
+	transition:0.3s;
+}
+
+div input[type="text"]:focus + i{
+	color:dodgerBlue;
+}
+
+@media(max-width:600px){
+	input[type="text"]{
+		width:70%;
+	}
+	div i{
+		left:7.2%;
+	}
+}
