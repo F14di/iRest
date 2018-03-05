@@ -2,6 +2,7 @@ import React from 'react'
 import LogoiRest from '../Logo/Logo'
 import classes from './Navigation.css'
 import './Navigation.css'
+import {Link} from 'react-router-dom'
 
 
 const Navigation =({onRouteChange,isLoggedIn})=>{
@@ -32,8 +33,8 @@ const Navigation =({onRouteChange,isLoggedIn})=>{
 			    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			    	<div className={classes.NavList}>
 				      <ul className="nav navbar-nav ">
-				        <li><a href="/AboutUs" >About Us <span className="sr-only">(current)</span></a></li>
-				        <li><a href="/Contact" >Contact</a></li>
+					      <li><Link to="AboutUs">About Us</Link></li>
+					      <li><Link to="Contact">Contact</Link></li>
 				      </ul>
 			     	</div>
 			      <ul className="nav navbar-nav navbar-right">
