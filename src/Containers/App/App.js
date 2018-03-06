@@ -1,21 +1,16 @@
 import React , {Component} from 'react'
-import {restaurants} from '../../Variables/RestaurantsList/Restaurant'
-import Restlist from '../../Components/RestList/Restlist'
-import SearchBox from '../../Components/SearchBox/SearchBox'
 import Signin from '../../Components/Signin/Signin'
 import Signup from '../../Components/Signup/Signup'
 import Navigation from '../../Components/Navigation/Navigation'
 import classes from './App.css'
 import LandingPhoto from '../../Components/LandingPhoto/LandingPhoto'
-
-
+import RestaurantSearch from '../../Components/RestaurantSearch/RestaurantSearch'
+import {Route, Switch} from 'react-router-dom'
+import Layout from '../../UI/Layout/Layout'
 
 class App extends Component{
-  constructor(){
-    super();
-    this.state={
-    restaurants:restaurants,
-    searchfield:'',
+ 
+    state={
     route:"home",
     isLoggedIn:true,
     user:{
@@ -24,7 +19,6 @@ class App extends Component{
       name:'',
       entries:0,
       joined:''
-    },
     }
   }
 
@@ -62,29 +56,16 @@ class App extends Component{
   render(){
     const {isLoggedIn, route, restaurants, searchfield}=this.state;
 
-    const filteredList= restaurants.filter(restaurants=>{
-      return restaurants.name.toLowerCase().includes(searchfield.toLowerCase())||
-       restaurants.location.toLowerCase().includes(searchfield.toLowerCase())});
+    
 
     return(   
         <div className="App">
-          <LandingPhoto />
-          <Navigation onRouteChange={this.onRouteChange} isLoggedIn={isLoggedIn}/>
+          
+          <Layout>
           <div  className={classes.App}>
-          {route==='home'?
-            <div className="tc">
-              <h1 className="tc code b"><span className="i">i</span>Rest</h1>
-              <SearchBox searchChange={this.onSearchHandler}/>
-              <Restlist restaurants={filteredList} clicked={this.props.showDescription}/>
-            </div>
-            :(
-              route==='signup'?
-              <Signup loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-              :
-              <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-            )
-          }
+          
           </div>
+          </Layout>
       </div>
     );
   }

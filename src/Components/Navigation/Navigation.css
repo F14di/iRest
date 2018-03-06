@@ -1,21 +1,24 @@
-.Navigation{
-cursor:pointer;
 
+.Navs{
+	background-color:rgba(121,98,112,0.6);
 }
+
 .NavList{
 	list-style:none;
 	display:inline-block;
-	 background-color:#aaa;
 	text-align:center;
 	font-size:14px;
     opacity: 0.8;
+
 }
+
 .NavList li{
     font-family : 'Oswald',sans-serif;
     padding:3px;
     maring:5px;
     font-weight:bold;
     display: inline-block;
+        color:blue;
     letter-spacing:1px;
    
 }
@@ -26,19 +29,15 @@ cursor:pointer;
 	transition:all 0.18s ease-in;
 	font-weight:bold;
 	color:white;
+    color:blue;
 	text-decoration:none;
 	text-transform:uppercase;
 }
 
-.NavList li:hover{
-	background-color:white;
+.NavList li :hover{
+	background-color:black;
 	color:white;
 	margin:auto;
 	opacity:1;
-	transition:all 0.18s ease-in;
-}
-.NavList a:hover{
-
-	color:white;
-
+	transition:all 0.12s ease-in;
 }

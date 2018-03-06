@@ -56,12 +56,7 @@ class Restlist extends Component{
 		key="addNewRestaurant"
 		newRestaurantForm={()=>this.newRestaurantForm}
 		/>
-		
 	)
-
-	
-
-
 		return(
 		<div className={classes.RestList}>
 			<Modal show={this.state.RestaurantInfoActive} modalClosed={this.hideDescriptionBox}>
@@ -71,7 +66,7 @@ class Restlist extends Component{
 					{RestComponent}
 				</div>
 		</div>
-	);
+		);
 	}
 
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Signin.css'
+import {Link} from 'react-router-dom'
 
 
 class Signin extends React.Component{
@@ -54,12 +55,17 @@ class Signin extends React.Component{
 				  <div className="form-inline ">
 					  <div className="form-group">
 					    <div className="col-sm-offset-2 col-sm-10 col-lg-3">
-					    	<input onClick={this.onSubmitSignIn} className="btn btn-sm btn-success" type="submit" value="Sign in"/>
+					    	<Link to="/"><input 
+					    	className="btn btn-sm btn-success" 
+					    	type="submit" 
+					    	value="Login"/></Link>
 					    </div>
 					   </div>
 					   <div className="form-group">
 						    <div className="col-sm-offset-2 col-sm-10 col-lg-3 text-success">
-						       <button onClick={()=>onRouteChange('signup')} href="#0" className="btn btn-sm btn-default" ><span className={classes.signUp}>Sign up</span></button>
+						       <Link to="Signup"><button 
+						        className="btn btn-sm btn-default" >
+						       <span className={classes.signUp}>Sign up</span></button></Link>
 					  	 	</div>
 				    	</div>
 					</div>
